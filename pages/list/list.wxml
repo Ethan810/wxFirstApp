@@ -1,0 +1,14 @@
+<view class="container">
+<!--使用竖向滚动时，需要给<scroll-view/>一个固定高度，通过 WXSS 设置 height。-->
+<scroll-view scroll-y="true" bindscrolltolower="handleScrolltolower" bindscrolltoupper="handleScrolltoupper">
+  <ul>
+  <!--data-后面只能使小写-->
+    <li wx:for="{{items}}" data-myid = "{{item.classID}}" bindtap="handleTapEvent">{{item.className}}</li>
+  </ul>
+  <view hidden="{{isInfinitHidden}}">
+     <button  loading="true"  >正在加载更多数据...</button>
+  </view>
+ 
+</scroll-view>
+  <loading hidden="{{isHidden}}">正在加载...</loading>
+</view>

@@ -1,0 +1,11 @@
+<view class="container">
+  <scroll-view scroll-y="true">
+    <ul>
+      <li wx:for="{{items}}">
+          <image src="{{item.goodsListImg}}"></image>
+          <p>{{item.goodsName}}</p>
+      </li>
+    </ul>
+    <loading hidden="{{isHidden}}">正在加载...</loading>
+  </scroll-view>
+</view>
